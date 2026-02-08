@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AK Solar Green Energy</title>
+
+<style>
+*{
+  margin:0;padding:0;box-sizing:border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#f3f6fb;
+  color:#1f2937;
+  line-height:1.6;
+}
+
+/* NAV */
+nav{
+  position:sticky;
+  top:0;
+  background:#0f172a;
+  padding:14px 24px;
+  z-index:1000;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+nav a, nav button{
+  color:#e5e7eb;
+  text-decoration:none;
+  margin-right:18px;
+  font-weight:600;
+  background:none;
+  border:none;
+  cursor:pointer;
+}
+
+nav a:hover{color:#38bdf8}
+
+/* HERO */
+.hero{
+  height:100vh;
+  background:
+    linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.85)),
+    url("https://images.unsplash.com/photo-1509391366360-2e959784a276");
+  background-size:cover;
+  background-position:center;
+  color:#f8fafc;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  text-align:center;
+  padding:0 20px;
+}
+
+.hero h1{font-size:54px;font-weight:700}
+.hero p{font-size:22px;margin-top:14px;color:#c7d2fe}
+
+/* SECTION */
+section{
+  padding:90px 20px;
+  max-width:1150px;
+  margin:auto;
+}
+
+h2{
+  text-align:center;
+  margin-bottom:28px;
+  color:#0f172a;
+}
+
+/* BOX */
+.box{
+  background:#ffffff;
+  padding:42px;
+  border-radius:16px;
+  box-shadow:0 12px 30px rgba(15,23,42,0.08);
+}
+
+/* SERVICES */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
+}
+
+.card{
+  background:#f1f5f9;
+  padding:26px;
+  border-radius:14px;
+  text-align:center;
+}
+
+.card h3{margin-bottom:10px;color:#0f172a}
+
+/* CALCULATOR */
+label{font-weight:600}
+small{display:block;color:#475569;margin-bottom:6px}
+
+input{
+  width:100%;
+  padding:14px;
+  margin-bottom:18px;
+  border-radius:10px;
+  border:1px solid #cbd5e1;
+}
+
+button.calc{
+  width:100%;
+  padding:15px;
+  background:#0284c7;
+  color:white;
+  border:none;
+  border-radius:10px;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+button.calc:hover{background:#0369a1}
+
+.result{
+  margin-top:24px;
+  background:#f0f9ff;
+  padding:22px;
+  border-radius:14px;
+  border:1px solid #bae6fd;
+}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  bottom:26px;
+  right:26px;
+  background:#25d366;
+  color:white;
+  font-size:30px;
+  padding:16px 18px;
+  border-radius:50%;
+  text-decoration:none;
+  box-shadow:0 6px 16px rgba(0,0,0,0.3);
+}
+
+/* FOOTER */
+footer{
+  background:#0f172a;
+  color:#cbd5e1;
+  text-align:center;
+  padding:30px;
+  margin-top:80px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#calculator">Calculator</a>
+    <a href="#subsidy">Subsidy</a>
+  </div>
+  <button onclick="toggleLang()">English | తెలుగు</button>
+</nav>
+
+<section class="hero">
+  <h1 id="title">AK Solar Green Energy</h1>
+  <p id="tagline">Reliable Rooftop Solar Solutions for Homes & Businesses</p>
+</section>
+
+<section id="about">
+  <div class="box">
+    <h2>About the Company</h2>
+    <p>
+      <b>AK Solar Green Energy Pvt. Ltd.</b> is a Telangana-based solar solutions
+      company delivering high-efficiency rooftop solar systems.
+      We manage everything from system design to installation,
+      net-metering approval, and long-term maintenance.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="box">
+    <h2>Founder</h2>
+    <p>
+      <b>Arjun Kumar</b> – Founder & Managing Director<br><br>
+      With over <b>10+ years of experience</b> in renewable energy and
+      electrical infrastructure, Arjun founded AK Solar Green Energy
+      to help households and businesses achieve energy independence
+      through affordable solar power.
+    </p>
+  </div>
+</section>
+
+<section id="services">
+  <h2>Our Core Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>Residential Rooftop Solar</h3>
+      <p>Customized solar systems for independent houses and apartments.</p>
+    </div>
+    <div class="card">
+      <h3>Commercial & Industrial Solar</h3>
+      <p>High-capacity systems for factories, offices, and institutions.</p>
+    </div>
+    <div class="card">
+      <h3>On-Grid Solar Systems</h3>
+      <p>Grid-connected systems with net-metering benefits.</p>
+    </div>
+    <div class="card">
+      <h3>Installation & AMC</h3>
+      <p>Professional installation with long-term maintenance support.</p>
+    </div>
+  </div>
+</section>
+
+<section id="calculator">
+  <h2>Solar Savings Calculator</h2>
+  <div class="box">
+    <label>Monthly Electricity Bill (₹)</label>
+    <small>Enter your average electricity bill</small>
+    <input id="bill" type="number" placeholder="Example: 3200">
+
+    <label>OR Monthly Units (kWh)</label>
+    <small>Enter units if you know them</small>
+    <input id="units" type="number" placeholder="Example: 420">
+
+    <button class="calc" onclick="calculate()">Calculate Solar Savings</button>
+    <div class="result" id="result"></div>
+  </div>
+</section>
+
+<section id="subsidy">
+  <div class="box">
+    <h2>Solar Subsidy – Telangana</h2>
+    <ul>
+      <li>Residential rooftop systems are eligible for government subsidy.</li>
+      <li>Up to <b>3 kW → 40% subsidy</b>.</li>
+      <li>3–10 kW → <b>20% subsidy</b> on additional capacity.</li>
+      <li>Net-metering reduces monthly electricity bills further.</li>
+    </ul>
+    <p style="margin-top:14px;color:#475569">
+      <em>Subsidy availability depends on MNRE & state policy at the time of installation.</em>
+    </p>
+  </div>
+</section>
+
+<a class="whatsapp"
+href="https://wa.me/919948768897?text=I%20need%20more%20info%20about%20solar%20installation"
+target="_blank">💬</a>
+
+<footer>
+  © 2026 AK Solar Green Energy • Hyderabad, Telangana<br>
+  Powering a cleaner, smarter future
+</footer>
+
+<script>
+function calculate(){
+  let bill=parseFloat(bill.value);
+  let units=parseFloat(units.value);
+  if(!units && bill) units=bill/7;
+  if(!units) return alert("Please enter bill or units");
+
+  let kw=Math.round((units/130)*2)/2;
+  let base=kw*50000;
+
+  let subsidy= kw<=3
+    ? base*0.4
+    : (3*50000*0.4)+((kw-3)*50000*0.2);
+
+  let net=base-subsidy;
+  let saving=kw*130*7;
+  let payback=net/(saving*12);
+
+  result.innerHTML=`
+    <b>Recommended System Size:</b> ${kw} kW<br><br>
+    <b>Base Cost:</b> ₹${base.toLocaleString()}<br>
+    <b>Government Subsidy:</b> ₹${subsidy.toLocaleString()}<br>
+    <b>Net Payable Cost:</b> ₹${net.toLocaleString()}<br><br>
+    <b>Estimated Monthly Savings:</b> ₹${saving.toLocaleString()}<br>
+    <b>Payback Period:</b> ${payback.toFixed(1)} years
+  `;
+}
+</script>
+
+</body>
+</html>
